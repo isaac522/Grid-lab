@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>read all about</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World News Summary</title>
+  <link rel="stylesheet" href="wbl.css">
+  <link rel="stylesheet" href="news_animations.css">
+</head>
+<body>
+  <!-- Bouncing icon -->
+  <div class="news bounce">
+    <img src="newsicon.png" alt="News Icon" width="50">
+  </div>
+
+  <div class="container">
+    <header>World News Summary</header>
+
+    <!-- Scrolling bar -->
+    <div class="breaking_news">
+      <div class="newsfeed slide">
+        <span class="newsFont">
+          Months of War in Ukraine, humanitarian disaster unfolds across Europe
+        </span>
+      </div>
+    </div>
+
+    <!-- Left side: text popup area -->
+    <aside id="hoverInfo">
+      <p><strong>Hover over an image to see the story.</strong></p>
+    </aside>
+
+    <!-- Right side: single light purple container for all images -->
+    <article class="imagePanel">
+      <img src="ukraine_conflict.jpg" alt="Ukraine Conflict" onmouseover="showInfo('Ukraine battles Russia for independence')" onmouseout="clearInfo()">
+      <img src="ketanjibj.jpg" alt="Ketanji Brown Jackson" onmouseover="showInfo('Judge Ketanji Brown-Jackson is interviewed')" onmouseout="clearInfo()">
+      <img src="russiancyberattacks.jpg" alt="Cyber Attacks" onmouseover="showInfo('Russian cyberattacks threaten global security')" onmouseout="clearInfo()">
+      <img src="dailynews.jpg" alt="Daily News" onmouseover="showInfo('Latest updates from around the world')" onmouseout="clearInfo()">
+      <img src="covid.jpg" alt="Covid" onmouseover="showInfo('Covid BA.2 variant spreads worldwide')" onmouseout="clearInfo()">
+    </article>
+
+    <footer>
+      Isaac Draves © 2025
+    </footer>
+  </div>
+
+  <!-- Simple JS to update text -->
+  <script>
+    function showInfo(text) {
+      document.getElementById("hoverInfo").innerHTML = "<p><strong>" + text + "</strong></p>";
+    }
+
+    function clearInfo() {
+      document.getElementById("hoverInfo").innerHTML = "<p><strong>Hover over an image to see the story.</strong></p>";
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

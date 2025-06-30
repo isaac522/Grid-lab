@@ -48,16 +48,31 @@ header {
   padding: 10px 0;
 }
 
-/* Breaking news banner */
+/* Breaking news banner - UPDATED */
 .breaking_news {
   grid-column: 1/5;
   grid-row: 2/3;
   background-color: #369bf5;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;  /* align left for sliding */
   align-items: center;
-  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;             /* hide overflow */
+  position: relative;
 }
+
+/* Newsfeed text sliding - UPDATED */
+.newsfeed {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: slidein;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
 .newsfeed span {
   color: #000066;
   font-weight: bold;
@@ -141,35 +156,12 @@ footer {
   padding-top: 5px;
 }
 
-/* Scrolling newsfeed animation */
-.newsfeed {
-  animation-duration: 10s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-name: slidein;
-}
-
+/* Sliding text animation using transform */
 @keyframes slidein {
   from {
-    margin-left: 100%;
-    width: 100%;
+    transform: translateX(100%);
   }
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(-100%);
   }
-}
-
-
-/* Footer */
-footer {
-  grid-column: 1 / 5;
-  grid-row: 21 / 22;
-  background-color: #66a2da;
-  text-align: center;
-  padding: 10px 0;
-  font-size: medium;
-  font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  color: white;
 }

@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>read all about</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>World News Summary</title>
-  <link rel="stylesheet" href="wbl.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="news_animations.css">
 </head>
 <body>
   <!-- Bouncing icon -->
   <div class="news bounce">
-    <img src="newsicon.jpg" alt="News Icon" width="50">
+    <img src="dailynews.jpg" alt="News Icon" width="50">
   </div>
 
   <div class="container">
@@ -34,38 +24,57 @@
       </div>
     </div>
 
-    <!-- Left side: text popup area -->
-    <aside id="hoverInfo">
-      <p><strong>Hover over an image to see the story.</strong></p>
+    <!-- Left side text -->
+    <aside>
+      <h3>Today,</h3>
+      <ul>
+        <li>Ukrainians battle Russia for the independence of their country</li>
+        <li>Judge Ketanji Brown-Jackson is interviewed</li>
+        <li>The threat of Russian cyberattacks looms</li>
+        <li>Covid arises - in the form of BA-2</li>
+        <li>Will Smith and Chris Rock at the Oscars 2022</li>
+        <li>Wildfires in Boulder, Colorado</li>
+      </ul>
     </aside>
 
-    <!-- Right side: single light purple container for all images -->
+    <!-- Images panel -->
     <article class="imagePanel">
-      <img src="ukraine_conflict.jpg" alt="Ukraine Conflict" onmouseover="showInfo('Ukraine battles Russia for independence')" onmouseout="clearInfo()">
-      <img src="ketanjibj.jpg" alt="Ketanji Brown Jackson" onmouseover="showInfo('Judge Ketanji Brown-Jackson is interviewed')" onmouseout="clearInfo()">
-      <img src="russiancyberattacks.jpg" alt="Cyber Attacks" onmouseover="showInfo('Russian cyberattacks threaten global security')" onmouseout="clearInfo()">
-      <img src="dailynews.jpg" alt="Daily News" onmouseover="showInfo('Latest updates from around the world')" onmouseout="clearInfo()">
-      <img src="covid.jpg" alt="Covid" onmouseover="showInfo('Covid BA.2 variant spreads worldwide')" onmouseout="clearInfo()">
+      <div class="infoBox zoom">
+        <a href="https://www.irishtimes.com/news/world/ukraine-crisis" target="_blank">
+          <img src="ukraine_conflict.jpg" alt="Ukraine Conflict">
+        </a>
+      </div>
+      <div class="infoBox zoom">
+        <a href="https://www.theguardian.com/us-news/2022/mar/21/ketanji-brown-jackson-confirmation-hearing-historic-chance" target="_blank">
+          <img src="ketanjibj.jpg" alt="Ketanji Brown Jackson">
+        </a>
+      </div>
+      <div class="infoBox zoom">
+        <a href="https://www.nytimes.com/2022/02/28/us/politics/ukraine-russia-microsoft.html" target="_blank">
+          <img src="russiancyberattacks.jpg" alt="Cyber Attacks">
+        </a>
+      </div>
+      <div class="infoBox zoom">
+        <a href="https://www.cdc.gov/coronavirus/2019-ncov/variants/variant.html" target="_blank">
+          <img src="covid.jpg" alt="Covid Variant">
+        </a>
+      </div>
+      <div class="infoBox zoom">
+        <a href="https://www.bbc.com/news/world-us-canada-60917361" target="_blank">
+          <img src="oscars.jpg" alt="Will Smith and Chris Rock">
+        </a>
+      </div>
+      <div class="infoBox zoom">
+        <a href="https://www.cbsnews.com/colorado/news/boulder-county-wildfire-update/" target="_blank">
+          <img src="wildfire.jpg" alt="Colorado Wildfire">
+        </a>
+      </div>
     </article>
 
     <footer>
       Isaac Draves © 2025
     </footer>
   </div>
-
-  <!-- Simple JS to update text -->
-  <script>
-    function showInfo(text) {
-      document.getElementById("hoverInfo").innerHTML = "<p><strong>" + text + "</strong></p>";
-    }
-
-    function clearInfo() {
-      document.getElementById("hoverInfo").innerHTML = "<p><strong>Hover over an image to see the story.</strong></p>";
-    }
-  </script>
 </body>
 </html>
-<!-- partial -->
-  
-</body>
-</html>
+
